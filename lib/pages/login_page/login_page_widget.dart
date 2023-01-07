@@ -1,10 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../auth/auth_util.dart';
 import '../../flutter_flow/flutter_flow_theme.dart';
 import '../../flutter_flow/flutter_flow_util.dart';
 import '../../flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginPageWidget extends StatefulWidget {
   const LoginPageWidget({Key? key}) : super(key: key);
@@ -342,18 +342,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         InkWell(
-                                          onTap: () async {
-                                            GoRouter.of(context)
-                                                .prepareAuthEvent();
-                                            final user =
-                                                await signInWithGoogle(context);
-                                            if (user == null) {
-                                              return;
-                                            }
-
-                                            context.goNamedAuth(
-                                                'top_page', mounted);
-                                          },
+                                          // onTap: () async {
+                                          //   GoRouter.of(context)
+                                          //       .prepareAuthEvent();
+                                          //   final user =
+                                          //       await signInWithGoogle(context);
+                                          //   if (user == null) {
+                                          //     return;
+                                          //   }
+                                          //
+                                          //   context.goNamedAuth(
+                                          //       'top_page', mounted);
+                                          // },
                                           child: Container(
                                             width: 50,
                                             height: 50,
@@ -382,18 +382,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () async {
-                                            GoRouter.of(context)
-                                                .prepareAuthEvent();
-                                            final user =
-                                                await signInWithApple(context);
-                                            if (user == null) {
-                                              return;
-                                            }
-
-                                            context.goNamedAuth(
-                                                'top_page', mounted);
-                                          },
+                                          // onTap: () async {
+                                          //   GoRouter.of(context)
+                                          //       .prepareAuthEvent();
+                                          //   final user =
+                                          //       await signInWithApple(context);
+                                          //   if (user == null) {
+                                          //     return;
+                                          //   }
+                                          //
+                                          //   context.goNamedAuth(
+                                          //       'top_page', mounted);
+                                          // },
                                           child: Container(
                                             width: 50,
                                             height: 50,
@@ -645,18 +645,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         InkWell(
-                                          onTap: () async {
-                                            GoRouter.of(context)
-                                                .prepareAuthEvent();
-                                            final user =
-                                                await signInWithGoogle(context);
-                                            if (user == null) {
-                                              return;
-                                            }
-
-                                            context.goNamedAuth(
-                                                'top_page', mounted);
-                                          },
+                                          // onTap: () async {
+                                          //   GoRouter.of(context)
+                                          //       .prepareAuthEvent();
+                                          //   final user =
+                                          //       await signInWithGoogle(context);
+                                          //   if (user == null) {
+                                          //     return;
+                                          //   }
+                                          //
+                                          //   context.goNamedAuth(
+                                          //       'top_page', mounted);
+                                          // },
                                           child: Container(
                                             width: 50,
                                             height: 50,
@@ -685,18 +685,18 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () async {
-                                            GoRouter.of(context)
-                                                .prepareAuthEvent();
-                                            final user =
-                                                await signInWithApple(context);
-                                            if (user == null) {
-                                              return;
-                                            }
-
-                                            context.goNamedAuth(
-                                                'top_page', mounted);
-                                          },
+                                          // onTap: () async {
+                                          //   GoRouter.of(context)
+                                          //       .prepareAuthEvent();
+                                          //   final user =
+                                          //       await signInWithApple(context);
+                                          //   if (user == null) {
+                                          //     return;
+                                          //   }
+                                          //
+                                          //   context.goNamedAuth(
+                                          //       'top_page', mounted);
+                                          // },
                                           child: Container(
                                             width: 50,
                                             height: 50,

@@ -1,5 +1,4 @@
-// ignore_for_file: overridden_fields, annotate_overrides
-
+/// 2023/01/07 flutter_flow output base
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

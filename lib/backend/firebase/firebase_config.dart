@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 
+/// firebase初期化処理
 Future initFirebase() async {
   if (kIsWeb) {
+    /// webMode時の初期化
     await Firebase.initializeApp(
         options: FirebaseOptions(
             apiKey: "AIzaSyC10oCHs-_yhmokvJk0XOf6YTvXMHQILm8",

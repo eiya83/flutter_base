@@ -9,8 +9,10 @@ import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
-import 'flutter_flow/nav/nav.dart';
+//import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +20,12 @@ void main() async {
 
   await FlutterFlowTheme.initialize();
 
-  runApp(MyApp());
+  runApp(
+    // memo:ProviderScopeはriverpodを使用するためのおまじない
+    ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -37,7 +44,7 @@ class _MyAppState extends State<MyApp> {
   late Stream<OsakiFirebaseUser> userStream;
 
   late AppStateNotifier _appStateNotifier;
-  late GoRouter _router;
+  //late GoRouter _router;
 
   final authUserSub = authenticatedUserStream.listen((_) {});
 
@@ -46,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _appStateNotifier = AppStateNotifier();
-    _router = createRouter(_appStateNotifier);
+    //_router = createRouter(_appStateNotifier);
     userStream = osakiFirebaseUserStream()
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
@@ -75,7 +82,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'osaki',
+      title: 'sample',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -87,8 +94,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: _themeMode,
-      routeInformationParser: _router.routeInformationParser,
-      routerDelegate: _router.routerDelegate,
+      routeInformationParser: router.routeInformationParser,
+      routerDelegate: router.routerDelegate,
     );
   }
 }
