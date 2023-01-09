@@ -57,10 +57,10 @@ class _MyAppState extends State<MyApp> {
     userStream = osakiFirebaseUserStream()
       ..listen((user) => _appStateNotifier.update(user));
     jwtTokenStream.listen((_) {});
-    Future.delayed(
-      Duration(seconds: 1),
-          () => _appStateNotifier.stopShowingSplashImage(),
-    );
+    // Future.delayed(
+    //   Duration(seconds: 1),
+    //       () => _appStateNotifier.stopShowingSplashImage(),
+    // );
   }
 
   @override

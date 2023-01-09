@@ -5,7 +5,7 @@ import '../../index.dart';
 //画面の情報を定義する
 final router = GoRouter(
   //1
-  initialLocation: '/',
+  initialLocation: '/samplePage',
   routes: [
     GoRoute(
       name: 'login',
@@ -32,6 +32,14 @@ final router = GoRouter(
       pageBuilder: (context, state) => MaterialPage(
         key: state.pageKey,
         child: const DetailPageWidget(),
+      ),
+      //builder: (context, _) => LoginPageWidget(),
+    ),
+    GoRoute(
+      name: 'sample_page',
+      path: '/samplePage',
+      pageBuilder: (context, _) => MaterialPage(
+        child: const SamplePageWidget(),
       ),
       //builder: (context, _) => LoginPageWidget(),
     ),
