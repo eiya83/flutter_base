@@ -9,7 +9,7 @@ pubspec.lock
 
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
-doc/api/
+doc/apic
 
 # Avoid committing generated Javascript files:
 *.dart.js
@@ -19,3 +19,6 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+.idea/
+lib/backend/firebase/firebase_config.dart
